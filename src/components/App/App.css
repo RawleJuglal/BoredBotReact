@@ -1,0 +1,174 @@
+:root{
+    --background: #535151;
+    --outline-color: #471972;
+    --face-color: #eae1f4;
+    --tongue-color: #f9bbbb;
+    --inner-bg: #d6cfe4;
+}
+
+.--app-app-desc{
+    text-align: center;
+    color:var(--outline-color);
+    margin-top:60px !important;
+}
+
+.cute-robot-v1{
+    height:600px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cute-robot-v1 *{
+    box-sizing: border-box;
+}
+
+.cute-robot-v1 .circle-bg {
+    background: var(--inner-bg);
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: 8px solid var(--outline-color);
+    position: relative;
+}
+
+.cute-robot-v1 .circle-bg:hover .robot-face{
+    top:40px !important;
+}
+
+.cute-robot-v1 .circle-bg:hover .eyes{
+    top: 30px !important;
+}
+
+.cute-robot-v1 .circle-bg:hover .mouth{
+    background: var(--outline-color);
+    border: none;
+    clip-path: polygon(0% 30%, 100% 30%, 100% 100%, 0% 100%);
+}
+
+.cute-robot-v1 .circle-bg:hover .mouth::after{
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 44%;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--tongue-color);
+    border-radius: 100%;
+}
+.robot-head {
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
+    border: 8px solid var(--outline-color);
+    border-radius: 85px/ 60px;
+    background: var(--background);
+    z-index: 4;
+}
+
+.robot-head::after {
+      content: "";
+      position: absolute;
+      top: -30px;
+      height: 30px;
+      width: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--outline-color);
+  }
+
+.robot-head::before{
+        content: "";
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 20px;
+        width: 20px;
+        background: var(--inner-bg);
+        border: 8px solid var(--outline-color);
+        border-radius: 100%;
+}
+
+.robot-face {
+    height: 120px;
+    width: 160px;
+    background: var(--face-color);
+    position: absolute;
+    top: 45px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 8px solid var(--outline-color);
+    border-radius: 45px;
+}
+
+.robot-face .eyes {
+    height: 20px;
+    width: 20px;
+    background: var(--outline-color);
+    border-radius: 100%;
+    position: absolute;
+    top: 40px;
+}
+
+.eyes.left{
+        left: 30px;
+}
+
+ .eyes.right{
+    right:30px;
+}
+
+.robot-face .mouth{
+    height: 45px;
+    width: 45px;
+    border-radius: 100%;
+    border: 8px solid transparent;
+    border-bottom-color: var(--outline-color);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50px;
+}
+
+.robot-ear{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    background: var(--background);
+    border: 8px solid var(--outline-color);
+    z-index: 3;
+    top: 30px;
+}
+
+.robot-ear.left{
+    left:-20px;
+}
+.robot-ear.right{
+    right:-20px;
+}
+
+.robot-body{
+    height: 50px;
+    width: 100px;
+    border: 8px solid var(--outline-color);
+    background: var(--background);
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 25px 25px 30px 30px;
+}
+
+.--app-activity{
+    text-align: center;
+    margin:auto;
+    width:300px;
+    border:2px solid var(--face-color);
+    padding:20px 20px;
+}
